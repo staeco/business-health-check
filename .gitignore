@@ -1,5 +1,6 @@
 node_modules
 package-lock.json
+yarn.lock
 
 ## Node.js
 lib-cov
