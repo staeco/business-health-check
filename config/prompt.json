@@ -3,23 +3,28 @@
   "options": [
     {
       "label": "the business is open with regular hours",
-      "value": 1
+      "value": "open",
+      "key": 1
     },
     {
       "label": "the business is open with modified hours",
-      "value": 2
+      "value": "open with modified hours",
+      "key": 2
     },
     {
       "label": "the business is closed temporarily",
-      "value": 3
+      "value": "temporarily closed",
+      "key": 3
     },
     {
       "label": "the business is permanently closed",
-      "value": 4
+      "value": "permanently closed",
+      "key": 4
     },
     {
       "label": "this is the wrong number",
-      "value": 5
+      "value": "invalid number",
+      "key": 5
     }
   ]
 }

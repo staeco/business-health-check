@@ -1,0 +1,20 @@
+{
+  "name": "business-health-check",
+  "version": "1.0.0",
+  "description": "A toolkit for checking up on your local businesses.",
+  "main": "index.js",
+  "repository": "https://github.com/staeco/business-health-check",
+  "author": "Contra <yo@contra.io>",
+  "license": "MIT",
+  "scripts": {
+    "test": "todo",
+    "download": "todo",
+    "filter-numbers": "todo",
+    "execute": "todo",
+    "clear": "rm -rf data/*.json",
+    "lint": "eslint . --fix"
+  },
+  "devDependencies": {
+    "@stae/linters": "^0.1.8"
+  }
+}
