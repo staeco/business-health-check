@@ -2,19 +2,24 @@
   "name": "business-health-check",
   "version": "1.0.0",
   "description": "A toolkit for checking up on your local businesses.",
-  "main": "index.js",
   "repository": "https://github.com/staeco/business-health-check",
   "author": "Contra <yo@contra.io>",
   "license": "MIT",
   "scripts": {
-    "test": "todo",
-    "download": "todo",
-    "filter-numbers": "todo",
-    "execute": "todo",
+    "test": "node bin/test.js",
+    "download": "node bin/download.js",
+    "filter-numbers": "node bin/filter-numbers.js",
+    "execute": "node bin/execute.js",
+    "finish": "node bin/finish.js",
     "clear": "rm -rf data/*.json",
     "lint": "eslint . --fix"
   },
   "devDependencies": {
     "@stae/linters": "^0.1.8"
+  },
+  "dependencies": {
+    "meow": "^6.1.0",
+    "superagent": "^5.2.2",
+    "twilio": "^3.42.2"
   }
 }

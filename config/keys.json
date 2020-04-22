@@ -1,4 +1,4 @@
 {
-  "accountId": "",
-  "authToken": ""
+  "accountSid": "r Auth Token from www.twilio.com/console",
+  "authToken": "r Auth Token from www.twilio.com/console"
 }
