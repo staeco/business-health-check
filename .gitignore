@@ -1,0 +1,32 @@
+node_modules
+package-lock.json
+
+## Node.js
+lib-cov
+*.seed
+*.log
+*.dat
+*.out
+*.pid
+*.gz
+pids
+results
+npm-debug.log
+
+## OS X
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.Spotlight-V100
+.Trashes
+
+## Windows
+Thumbs.db
+thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+data/input.json
+data/output.json

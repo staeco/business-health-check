@@ -1,0 +1,25 @@
+{
+  "greeting": "PLACEHOLDER",
+  "options": [
+    {
+      "label": "the business is open with regular hours",
+      "value": 1
+    },
+    {
+      "label": "the business is open with modified hours",
+      "value": 2
+    },
+    {
+      "label": "the business is closed temporarily",
+      "value": 3
+    },
+    {
+      "label": "the business is permanently closed",
+      "value": 4
+    },
+    {
+      "label": "this is the wrong number",
+      "value": 5
+    }
+  ]
+}
