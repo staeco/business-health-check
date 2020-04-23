@@ -1,25 +1,25 @@
 {
   "language": "en-US",
-  "greeting": "We are conducting a quick survey of businesses to assist your local government - your number is listed as the contact for <%= name %>",
-  "closing": "Your response has been noted - thank you for participating in this survey to inform your local government.",
+  "greeting": "We are conducting a quick survey of businesses to assist your local community - your number is listed as the contact for <%= name %>",
+  "closing": "Your response has been noted - thank you for participating in this survey to inform your local community. Goodbye.",
   "options": [
     {
-      "label": "the business is open with regular hours",
+      "label": "you are open with regular hours",
       "value": "open",
       "key": 1
     },
     {
-      "label": "the business is open with modified hours",
+      "label": "you are open with modified hours",
       "value": "open with modified hours",
       "key": 2
     },
     {
-      "label": "the business is temporarily closed",
+      "label": "you are temporarily closed",
       "value": "temporarily closed",
       "key": 3
     },
     {
-      "label": "the business is permanently closed",
+      "label": "you are permanently closed",
       "value": "permanently closed",
       "key": 4
     },
