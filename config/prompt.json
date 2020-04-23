@@ -1,5 +1,7 @@
 {
-  "greeting": "PLACEHOLDER",
+  "language": "en-US",
+  "greeting": "We are conducting a quick survey of businesses to assist your local government - your number is listed as the contact for <%= name %>",
+  "closing": "Your response has been noted - thank you for participating in this survey to inform your local government.",
   "options": [
     {
       "label": "the business is open with regular hours",
@@ -22,7 +24,7 @@
       "key": 4
     },
     {
-      "label": "this is the wrong number",
+      "label": "this is not your business",
       "value": "invalid number",
       "key": 5
     }

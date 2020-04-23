@@ -31,3 +31,4 @@ $RECYCLE.BIN/
 
 data/input.json
 data/output.json
+config/secret-keys.json

@@ -1,4 +1,5 @@
 {
-  "accountSid": "r Auth Token from www.twilio.com/console",
-  "authToken": "r Auth Token from www.twilio.com/console"
+  "accountSid": "Auth Token from twilio.com/console",
+  "authToken": "Auth Token from twilio.com/console",
+  "phoneNumber": "Voice enabled phone number from twilio.com/console"
 }
