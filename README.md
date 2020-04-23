@@ -14,9 +14,14 @@ yarn
 
 ## Configuration
 
-- Create a Twilio account and provide your account ID and access token in the `config/keys.json` file.
+- Create a Twilio account and provide your account ID, access token, and phone number in the `config/keys.json` file.
 - Edit the `config/prompt.json` file and update the greeting and options for your locality.
 
 ## Performing a Survey
 
-Instructions coming soon! Stay tuned.
+```sh
+yarn download <municipal.systems business permit export URL>
+yarn filter-numbers
+yarn execute
+yarn finish
+```
