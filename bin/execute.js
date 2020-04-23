@@ -18,7 +18,7 @@ const processRecord = async (planItem) => {
 const run = async () => {
   console.log(`Plan contains ${vals.length} items, and we are contacting ${queue.length}...`)
   server = await createServer()
-  await pMap(queue, processRecord, { concurrency: 10 })
+  await pMap(queue, processRecord, { concurrency: 5 })
 }
 
 if (queue.length === 0) {
