@@ -29,6 +29,5 @@ thumbs.db
 Desktop.ini
 $RECYCLE.BIN/
 
-data/input.json
-data/output.json
+data/*.json
 config/secret-keys.json

@@ -6,12 +6,13 @@
   "author": "Contra <yo@contra.io>",
   "license": "MIT",
   "scripts": {
-    "test": "node bin/test.js",
+    "test-create-plan": "NODE_ENV=testing node bin/test-create-plan.js",
+    "test-execute": "NODE_ENV=testing node bin/execute.js",
     "download": "node bin/download.js",
-    "filter-numbers": "node bin/filter-numbers.js",
+    "create-plan": "node bin/create-plan.js",
     "execute": "node bin/execute.js",
     "finish": "node bin/finish.js",
-    "clear": "rm -rf data/*.json",
+    "clear-plan": "rm -rf data/plan.json",
     "lint": "eslint . --fix"
   },
   "devDependencies": {
@@ -23,6 +24,7 @@
     "lodash": "^4.17.15",
     "meow": "^6.1.0",
     "ngrok": "^3.2.7",
+    "p-map": "^4.0.0",
     "superagent": "^5.2.2",
     "twilio": "^3.42.2"
   }

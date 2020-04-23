@@ -4,15 +4,13 @@ const prompt = require('../../config/prompt')
 
 const sayOpt = { language: prompt.language, voice: prompt.voice }
 
-module.exports.closing = () => {
+module.exports.hangup = () => {
   const response = new twiml.VoiceResponse()
-  response
-    .say(prompt.closing, sayOpt)
-
+  response.hangup()
   return response.toString()
 }
 
-module.exports.opening = (business, responseUrl) => {
+module.exports.opening = (record, digitUrl) => {
   const options = prompt.options.map((o) =>
     `If ${o.label} please press ${o.key}`
   ).join('. ')
@@ -22,9 +20,15 @@ module.exports.opening = (business, responseUrl) => {
     .gather({
       finishOnKey: '',
       numDigits: 1,
-      action: responseUrl
+      action: digitUrl
     })
-    .say(template(fullText)(business), sayOpt)
+    .say(template(fullText)(record), sayOpt)
 
+  return response.toString()
+}
+
+module.exports.closing = () => {
+  const response = new twiml.VoiceResponse()
+  response.say(prompt.closing, sayOpt)
   return response.toString()
 }
