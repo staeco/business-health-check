@@ -24,5 +24,6 @@ yarn
 yarn download <municipal.systems business export URL>
 yarn create-plan
 yarn execute
+yarn report
 yarn finish
 ```
