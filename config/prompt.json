@@ -1,6 +1,7 @@
 {
   "language": "en-US",
-  "greeting": "We are conducting a quick survey of businesses to assist your local community - your number is listed as the contact for <%= name %>",
+  "voice": "Polly.Kendra-Neural",
+  "greeting": "We are conducting a one question survey of businesses to assist your local community - your number is listed as the contact for <%= name %>",
   "closing": "Your response has been noted - thank you for participating in this survey to inform your local community. Goodbye.",
   "options": [
     {
