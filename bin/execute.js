@@ -12,6 +12,7 @@ const processRecord = async (planItem) => {
   plan.update(planItem.record.id, { attempts: planItem.attempts + 1 })
   await plan.save()
   await createCall(planItem.record, server.urls)
+  await new Promise((resolve) => setTimeout(resolve, 30000)) // wait 30s between calls so we dont send out thousands of calls at once
 }
 
 const run = async () => {
@@ -27,7 +28,7 @@ if (queue.length === 0) {
 
 run()
   .then(() => {
-    console.log('Calls are going out! Please wait 5-10 minutes before closing this process.')
+    console.log('Calls are going out! Please wait 5-10 minutes after the last message before closing this process.')
     setInterval(() => plan.save(), 3000)
   })
   .catch((err) => {
