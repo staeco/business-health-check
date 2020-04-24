@@ -5,7 +5,7 @@ const createServer = require('../src/twilio/server')
 
 let server
 const vals = Object.values(plan.value)
-const queue = vals.filter((i) => i.attempts <= 3 && i.phoneNumberMeta.valid && !i.response)
+const queue = vals.filter((i) => i.attempts < 3 && i.phoneNumberMeta.valid && !i.response)
 
 const processRecord = async (planItem) => {
   console.log('Calling', planItem.record.name, 'via', planItem.record.phone)
