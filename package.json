@@ -8,6 +8,7 @@
   "scripts": {
     "test-create-plan": "NODE_ENV=testing node bin/test-create-plan.js",
     "test-execute": "NODE_ENV=testing node bin/execute.js",
+    "test-finish": "NODE_ENV=testing node bin/finish.js",
     "download": "mkdir data && node bin/download.js",
     "create-plan": "node bin/create-plan.js",
     "execute": "node bin/execute.js",
