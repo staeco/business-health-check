@@ -1,7 +1,7 @@
 {
   "language": "en-US",
-  "voice": "Polly.Joanna-Neural",
-  "openingAudio": "https://raw.githubusercontent.com/staeco/business-health-check/master/static/opening.mp3",
+  "voice": "Polly.Kendra-Neural",
+  "openingAudio": "opening.mp3",
   "greeting": "Your number is listed as the contact for <%= name %>",
   "closing": "Your response has been noted - thank you for participating in this survey to inform your local community. Goodbye.",
   "options": [

@@ -70,7 +70,7 @@ module.exports = async () => {
   app.urls = {
     primary: (record) => `${tunnelUrl}/call-started?id=${record.id}`,
     digits: (record) => `${tunnelUrl}/digits?id=${record.id}`,
-    openingAudio: () => `${tunnelUrl}${staticConfig.url}/opening.mp3`
+    openingAudio: () => prompt.openingAudio && `${tunnelUrl}${staticConfig.url}/${prompt.openingAudio}`
   }
   app.close = async () => {
     await ngrok.disconnect()

@@ -10,20 +10,21 @@ module.exports.hangup = () => {
   return response.toString()
 }
 
-module.exports.opening = (record, digitUrl) => {
+module.exports.opening = (record, digitUrl, openingAudio) => {
   const options = prompt.options.map((o) =>
     `If ${o.label} please press ${o.key}`
   ).join('. ')
   const fullText = `${prompt.greeting}. ${options}.`
   const response = new twiml.VoiceResponse()
+  if (openingAudio) response.play({ loop: 1 }, openingAudio)
   response
     .gather({
       finishOnKey: '',
       numDigits: 1,
+      timeout: 20,
       action: digitUrl
     })
-  if (prompt.openingAudio) response.play({ loop: 1 }, prompt.openingAudio)
-  response.say(template(fullText)(record), sayOpt)
+    .say(template(fullText)(record), sayOpt)
 
   return response.toString()
 }

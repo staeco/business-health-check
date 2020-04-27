@@ -18,7 +18,7 @@ yarn
 - Create a Twilio account and provide your account ID, access token, and phone number in the `config/secret-keys.json` file.
 - (Optional) Record a greeting to open your call with [here](https://online-voice-recorder.com/) and save the file as `static/opening.mp3`. A default recording is available.
   - Our testing indicates people don't like receiving calls from robots and will immediately hang up when hearing one speak - having a human touch at the start of the call improves the response rate.
-  - If you don't, you can delete the `openingAudio` flag from the configuration to skip it.
+  - If you don't want this you can delete the `openingAudio` flag from the configuration to skip it.
 - Edit the `config/prompt.json` file and update the options for your locality.
 ## Testing the Call
 
