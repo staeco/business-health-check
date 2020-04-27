@@ -6,13 +6,13 @@
   "closing": "Your response has been noted - thank you for participating in this survey to inform your local community. Goodbye.",
   "options": [
     {
-      "label": "you are open with regular hours",
+      "label": "you are open with regular service and hours",
       "value": "open",
       "key": 1
     },
     {
-      "label": "you are open with modified hours",
-      "value": "open with modified hours",
+      "label": "you are open with modified service or hours",
+      "value": "open with modifications",
       "key": 2
     },
     {
