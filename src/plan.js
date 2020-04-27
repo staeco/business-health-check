@@ -16,18 +16,18 @@ try {
 const ctx = {
   value: plan,
   wipe: () => {
-    ctx.value = plan = {}
+    ctx.value = {}
   },
-  get: (recordId) => plan[recordId],
+  get: (recordId) => ctx.value[recordId],
   update: (recordId, update) => {
-    plan[recordId] = {
-      ...plan[recordId] || {},
+    ctx.value[recordId] = {
+      ...ctx.value[recordId] || {},
       ...update
     }
     return ctx
   },
   save: async () =>
-    writeFileAsync(planPath, JSON.stringify(plan), 'utf8')
+    writeFileAsync(planPath, JSON.stringify(ctx.value), 'utf8')
 }
 
 module.exports = ctx

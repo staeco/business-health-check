@@ -1,6 +1,8 @@
 const ngrok = require('ngrok')
 const express = require('express')
 const bodyParser = require('body-parser')
+const st = require('st')
+const path = require('path')
 const plan = require('../plan')
 const markup = require('./markup')
 const prompt = require('../../config/prompt')
@@ -8,13 +10,19 @@ const port = require('../../config/server')
 
 const actualPort = process.env.PORT || port
 const humanAnswers = [ 'human', 'unknown' ]
+const staticConfig = {
+  path: path.join(__dirname, '../../static'),
+  url: '/static'
+}
+
 module.exports = async () => {
   const app = express()
   app.use(bodyParser.urlencoded({ extended: false }))
+  app.use(st(staticConfig))
 
   // this handles what to do when they pick up the phone
   app.post('/call-started', (req, res) => {
-    const isHumanAnswer = humanAnswers.includes(req.body.AnsweredBy)
+    const isHumanAnswer = !req.body.AnsweredBy || humanAnswers.includes(req.body.AnsweredBy)
     const { record } = plan.get(req.query.id)
 
     if (!isHumanAnswer || !record) {
@@ -28,7 +36,11 @@ module.exports = async () => {
     res
       .type('text/xml')
       .status(200)
-      .send(markup.opening(record, app.urls.digits(record)))
+      .send(markup.opening(
+        record,
+        app.urls.digits(record),
+        app.urls.openingAudio(record)
+      ))
       .end()
   })
 
@@ -57,7 +69,8 @@ module.exports = async () => {
   const tunnelUrl = await ngrok.connect(actualPort)
   app.urls = {
     primary: (record) => `${tunnelUrl}/call-started?id=${record.id}`,
-    digits: (record) => `${tunnelUrl}/digits?id=${record.id}`
+    digits: (record) => `${tunnelUrl}/digits?id=${record.id}`,
+    openingAudio: () => `${tunnelUrl}${staticConfig.url}/opening.mp3`
   }
   app.close = async () => {
     await ngrok.disconnect()

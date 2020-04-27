@@ -22,7 +22,8 @@ module.exports.opening = (record, digitUrl) => {
       numDigits: 1,
       action: digitUrl
     })
-    .say(template(fullText)(record), sayOpt)
+  if (prompt.openingAudio) response.play({ loop: 1 }, prompt.openingAudio)
+  response.say(template(fullText)(record), sayOpt)
 
   return response.toString()
 }
